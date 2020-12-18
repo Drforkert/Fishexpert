@@ -185,20 +185,34 @@
         </div>
     </section>
     <section class="slider" id="slider">
-        <div class="title">
+        <div class="title white">
             <h2 class=titleText><span>B</span>ildergallerie</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, vero?</p>
         </div>
-        <div class="carousel-container">
-            <i class="fas fa-arrow-right" id="nextBtn"></i>
-            <i class="fas fa-arrow-left" id="prevBtn"></i>
-            <div class="carousel-slide">
-                <img src="./sliderimg/img4medium.jpg" id="lastClone" alt="">
-                <img src="./sliderimg/img1medium.jpg">
-                <img src="./sliderimg/img2medium.jpg">
-                <img src="./sliderimg/img3medium.jpg">
-                <img src="./sliderimg/img4medium.jpg">
-                <img src="./sliderimg/img1medium.jpg" id="firstClone" alt="">
+        <div class="slideshow-container">
+            <i class="fas fa-arrow-right" onclick="newSlide(1)" id="nextBtn"></i>
+            <i class="fas fa-arrow-left" onclick="newSlide(-1)" id="prevBtn"></i>
+            <div class="image-container">
+                <img src="./sliderimg/img3medium.jpg" class="image fade">
+            </div>
+            <div class="image-container">
+                <img src="./sliderimg/img2medium.jpg" class="image fade">
+            </div>
+            <div class="image-container">
+                <img src="./sliderimg/img3medium.jpg" class="image fade">
+            </div>
+            <div class="image-container">
+                <img src="./sliderimg/img4medium.jpg" class="image fade">
+            </div>
+            <div class="image-container">
+                <img src="./sliderimg/img2medium.jpg" class="image fade">
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
         </div>
     </section>
@@ -224,6 +238,6 @@
         </div>
     </section>
     <script src="./js/main.js"></script>
-    <script src="./js/carousel.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>
