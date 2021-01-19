@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FischDietzexpert</title>
+    <meta name="description" content="Das ist eine Website die eine große Aquakultur an Frischfisch anbietet">
+    <meta name="keywords" content="Fisch, Frischfisch, Räucherlachs, Kibbelings, Thunfisch, Fischbrötchen, Wochenmarkt, Muscheln, Skreifilet, Winterkabeljau, Promis, Mittelmeer, nachhaltig, Frisch, Handarbeit, Chef, Tradition, Traditionsfischverkauf">
+    <title>Fisch Dietz</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/59c8dc5b08.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v9.0" nonce="BaRJmdrS"></script>
+    <!-- Header Page startet Hier  -->
     <section id="header">
         <div class="header container">
             <div class="nav-bar">
@@ -19,7 +26,7 @@
                     <div class="hamburger"><div class="bar"></div></div>
                     <ul>
                         <li><a href="#about" data-after="infos">Über uns</a></li>
-                        <li><a href="#menu" data-after="Alle Angebote">Unsere Angebote</a></li>
+                        <li><a href="#menu" data-after="Angebote">Unsere Angebote</a></li>
                         <li><a href="#expert" data-after="Ansprüche">Ansprüche</a></li>
                         <li><a href="#testimonials" data-after="Promis">Promis</a></li>
                         <li><a href="#slider" data-after="Gallerie">Bilder</a></li>
@@ -29,185 +36,313 @@
             </div>
         </div>
     </section>
+    <!-- Header Page endet Hier -->
+    <!-- Landing Page startet Hier -->
     <section id="hero">
         <div class="hero container">
             <div>
                 <h1>Fisch Dietz<span></span></h1>
                 <h1>So geht Fisch<span></span></h1>
-                <a href="#" type="button" class="cta">mehr erfahren</a>
+                <a href="#about" type="button" class="cta">mehr erfahren</a>
             </div>
         </div>
     </section>
-    <section class="about" id="about">
+    <!-- Landing Page endet Hier -->
+    <!-- Über uns Page startet Hier -->
+    <section class="about" id="about" data-aos="fade-in">
         <div class="row">
             <div class="col50">
                 <h2 class="titleText"><span>Ü</span>ber uns</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis, tempore facilis quia neque ab! Nesciunt quas, ipsa fugit illum quaerat possimus cumque excepturi autem ipsam impedit illo eveniet dolorem?<br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate rem explicabo laboriosam dolor tenetur, magnam quaerat quos saepe corporis!</p>
+                <p>Mit Fischhandel Dietz machen Sie immer einen guten Fang!
+                    Seit 1963 ist der Name Dietz ein Begriff für Fischspezialitäten in erstklassiger Qualität und Frische.
+                    Ob Frischfisch, Geräuchertes, Fischsalate, saisonale Angebote wie Matjes, fertig marinierten Grillfisch oder Muscheln... bei uns machen Sie immer einen guten Fang.<br><br>
+                    Nahezu täglich setzen wir die Segel und ordern frische Ware auf den Fischmärkten dieser Welt. Zu Ihnen kommt der frische Fisch dann über unsere 4  Verkaufswagen auf die Wochenmärkte der Region.
+                    Wir freuen uns, Sie bald bei uns an Bord begrüßen zu dürfen.</p>
+                    <p>Ihre Crew vom Fischhandel Dietz!</p>
+                <button id="modalBtn" class="btn">Events / Wochenmarkt</button>
+                <div id="simpleModal" class="modal">
+                    <div class="modal-content">
+                        <h2 class="titleText"><span>U</span>nsere <span>W</span>ochenmarkttermine</h2>
+                        <span class="closeBtn" id="closeBtn">&times;</span>
+                        <div class="responsive-container">
+                            <table id="table">
+                                <tr>
+                                    <th>Wochentag:</th>
+                                    <th>Welcher Ort?</th>
+                                    <th>Zu welchen Zeiten?</th>
+                                    <th>Wo genau?</th>
+                                </tr>
+                                <tr>
+                                    <td>Dienstags:</td>
+                                    <td>Soest</td>
+                                    <td>von 7:00-14:00 Uhr</td>
+                                    <td>Hauptmarkt</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Lünen</td>
+                                    <td>von 7:00 - 13:00 Uhr</td>
+                                    <td>Hauptmarkt</td>
+                                </tr>
+                                <tr>
+                                    <td>Mittwochs:</td>
+                                    <td>Soest</td>
+                                    <td>von 8:00 - 15:00 Uhr</td>
+                                    <td>Clevische Straße Rewe</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Brilon</td>
+                                    <td>von 7:00 - 14:00 Uhr</td>
+                                    <td>Hauptmarkt</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Unna</td>
+                                    <td>von 8:00 - 18:00 Uhr</td>
+                                    <td>Rewe Engel (Massen)</td>
+                                </tr>
+                                <tr>
+                                    <td>Donnerstags:</td>
+                                    <td>Soest</td>
+                                    <td>von 7:00 - 14:00 Uhr</td>
+                                    <td>Hauptmarkt</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Hamm</td>
+                                    <td>von 8:30 - 15:00 Uhr</td>
+                                    <td>Maxicenter</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Unna</td>
+                                    <td>von 8:00 - 18:00 Uhr</td>
+                                    <td>Rewe Engel (Königsborn)</td>
+                                </tr>
+                                <tr>
+                                    <td>Freitags:</td>
+                                    <td>Soest</td>
+                                    <td>von 8:00 - 15:00 Uhr</td>
+                                    <td>Soest Clevische Straße Rewe</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Bad Sassendorf</td>
+                                    <td>von 7:00 - 13:30 Uhr</td>
+                                    <td>Der Shop?</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Lünen</td>
+                                    <td>von 7:00 - 13:00 Uhr</td>
+                                    <td>Hauptmarkt</td>
+                                </tr>
+                                <tr>
+                                    <td>Samstags:</td>
+                                    <td>Soest</td>
+                                    <td>von 7:00 - 14:00 Uhr</td>
+                                    <td>Hauptmarkt</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Kamen</td>
+                                    <td>von 8:00 - 15:00 Uhr</td>
+                                    <td>Rewe Ahlmann Kamen Methler</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Brilon</td>
+                                    <td>von 8:00 - 15:00 Uhr</td>
+                                    <td>Marktplatz</td>
+                                </tr>
+                            </table>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col50">
+                <div class="sidebar">
+                    <div class="fb-page" data-href="https://www.facebook.com/Fischdietz" data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Fischdietz" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Fischdietz">Fisch- &amp; Feinkosthandel Dietz</a></blockquote></div>
+                </div>
             </div>
             <div class="col50">
                 <div class="imgbx">
-                    <img src="./assets/Christmasfish.png">
+                    <img src="./assets/tradition.png" alt="home">
                 </div>
             </div>
         </div>
     </section>
-    <section class="menu" id="menu">
-        <div class="title">
-            <h2 class="titleText">Unsere <span>A</span>ngebote</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut.</p>
+    <!-- Über uns Page endet Hier -->
+    <!-- Unsere Angebote Page startet Hier -->
+    <section class="menu" id="menu" data-aos="fade-in">
+        <div class="title white">
+            <h2 class="titleText"><span>U</span>nsere <span>A</span>ngebote</h2>
+            <p>Hier einmal eine kleine Vorstellung unserer Angebote</p>
         </div>
         <div class="content">
             <div class="box">
                 <div class="imgbx">
-                    <img src="./assets/Monkfish.png">
+                    <img src="https://static.wixstatic.com/media/a94ba0_63d6db58505c405aa4a80e8767828810~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_296,h_383,al_c,q_80,usm_0.66_1.00_0.01/20190206_091048.webp" class="image fade" alt="home" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Lorem, ipsum dolor.</h3>
+                    <h3>... Oder auch frisch aus erster Hand </h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbx">
-                    <img src="./assets/smokedsalmon2.jpg">
+                    <img src="./assets/auslage2.png" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Lorem, ipsum dolor.</h3>
+                    <h3>Riesenauswahl ob geräuchert oder gegrillt</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbx">
-                    <img src="./assets/Muscheln.png">
+                    <img src="https://static.wixstatic.com/media/a94ba0_6e737dca10f24704b4ea80e6a97867cb~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_297,h_378,al_c,q_80,usm_0.66_1.00_0.01/20190206_090234.webp" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Lorem, ipsum dolor.</h3>
+                    <h3>Frische Kibbelings aus eigener Herstellung</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbx">
-                    <img src="./assets/dorade.png">
+                    <img src="https://static.wixstatic.com/media/a94ba0_37f8640b41784c1590032877740e980e~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_298,h_389,al_c,q_80,usm_0.66_1.00_0.01/20190206_090912.webp" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Lorem, ipsum dolor.</h3>
+                    <h3>Unsere Auslage ist stets mit einer großen Vielfalt bestückt</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbx">
-                    <img src="./assets/lobster.png">
+                    <img src="./assets/lobster.png" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Lorem, ipsum dolor.</h3>
+                    <h3>Wir lösen den Fisch/Hummer auch gern für sie aus!</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbx">
-                    <img src="./assets/sashimi.jpg">
+                    <img src="https://static.wixstatic.com/media/3a31b5df3694ab0a40849af6573173a4.jpg/v1/fill/w_373,h_246,al_c,q_80,usm_0.66_1.00_0.01/Rote%20Thunfisch-Sashimi%20.webp" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h3>unser Thunfisch gefangen im Nordatlantik</h3>
                 </div>
-            </div>
-            <div class="title">
-                <a href="#" class="btn">Mehr anzeigen</a>
             </div>
         </div>
     </section>
-    <section class="expert" id="expert">
-        <div class="title">
-            <h2 class="titleText">Unsere <span>A</span>nsprüche</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut.</p>
+    <!-- Unsere Angebote Page endet Hier -->
+    <!-- Ansprüche Page startet Hier -->
+    <section class="expert" id="expert" data-aos="fade-in">
+        <div class="title white">
+            <h2 class="titleText"><span>U</span>nsere <span>A</span>nsprüche</h2>
+            <p>Uns steht es als oberstes Gebot die folgenden Dinge umzusetzen</p>
         </div>
         <div class="content">
             <div class="box">
                 <div class="imgbox">
-                    <img src="./assets/satisfiedcustomer.jpg">
+                    <img src="https://images.pexels.com/photos/3824771/pexels-photo-3824771.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Kundenzufriedenheit!</h3>
+                    <h3>Kundenzufriedenheit ist das A und O</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbox">
-                    <img src="./assets/Freshnesspure.jpg">
+                    <img src="https://images.pexels.com/photos/2031994/pexels-photo-2031994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Qualität und Frische!</h3>
+                    <h3>Qualität und Frische steht bei uns an erster Stelle</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbox">
-                    <img src="./assets/statisfied.jpg">
+                    <img src="https://static.wixstatic.com/media/a94ba0_0329495a0f6e472e9709596aed51c936~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_496,h_656,al_c,q_80,usm_0.66_1.00_0.01/20190206_090814.webp" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Freundlichtkeit!</h3>
+                    <h3>Freundlichkeit gegenüber jedem Kunden ist ein weiteres Gebot</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbox">
-                    <img src="./assets/nachhaltig.jpg">
+                    <img src="https://images.pexels.com/photos/3731945/pexels-photo-3731945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="home">
                 </div>
                 <div class="Text">
-                    <h3>Nachhaltigkeit!</h3>
+                    <h3>Wir stehen für nachhaltigen Fischfang!</h3>
                 </div>
             </div>
         </div>
     </section>
-    <section class="testimonials" id="testimonials">
+    <!-- Ansprüche Page endet Hier -->
+    <!-- Promis Page startet Hier -->
+    <section class="testimonials" id="testimonials" data-aos="fade-in">
         <div class="title white">
             <h2 class="titleText"><span>P</span>romis vom <span>M</span>ittelmeer</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut.</p>
+            <p>Nähere Vorstellung unserer Drei Renner</p>
         </div>
         <div class="content">
             <div class="box">
                 <div class="imgbox">
-                    <img src="./assets/smokedsalmon.jpg">
+                    <img src="https://static.wixstatic.com/media/a94ba0_8eaf1abcf5724391af82728960b00739~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_253,h_330,al_c,q_80,usm_0.66_1.00_0.01/R%C3%A4ucherlachs.webp" alt="home">
                 </div>
                 <div class="Text">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa debitis rerum ex nostrum sint illo earum voluptates in amet corporis.</p>
+                    <p>Unsere Rohwahre suchen wir selbstverständlich selbst aus, wir filetieren und salzen per Hand.
+                        Anschließend wird über Buchenmehl kalt geräuchert, das Ganze verläuft nach strengstem Einhalten alter Traditionen.
+                        Der Chef persönlich übernimmt dann die Feinarbeit und schneidet entweder in hauchdünne Scheiben oder wahlweise in Rückenfilet.
+                    </p>
                     <h3>Räucherlachs</h3>
                 </div>
             </div>
             <div class="box">
                 <div class="imgbox">
-                    <img src="./assets/Sashimi2.png">
+                    <img src="https://static.wixstatic.com/media/3a31b5df3694ab0a40849af6573173a4.jpg/v1/fill/w_373,h_246,al_c,q_80,usm_0.66_1.00_0.01/Rote%20Thunfisch-Sashimi%20.webp" alt="home">
                 </div>
                 <div class="Text">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa debitis rerum ex nostrum sint illo earum voluptates in amet corporis.</p>
-                    <h3>Sashimi Thunfisch</h3>
+                    <p>Herkunft: Der Thunfisch ist ein Weltreisender, der am allerliebsten in wärmerem Wasser (10 Grad und aufwärts) lebt. Gefangen wird er vor allem im Pazifik und Indischen Ozean, aber auch vor den Ostküsten Amerikas, im Mittelmeer und um China und Japan herum.
+                        Thunfische gehören weltweit zu den wichtigsten Nutzfischen.
+                    </p>
+                    <h3>Nordatlantik Thunfisch</h3>
                 </div>
             </div>
+                <!-- Hier unten bei p eure beschreibung einfügen -->
             <div class="box">
                 <div class="imgbox">
-                    <img src="./assets/dorade2.png">
+                    <img src="https://static.wixstatic.com/media/a94ba0_62a7e7593e82408c90c0d29aa30de815~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_244,h_320,al_c,q_80,usm_0.66_1.00_0.01/Kibbelings.webp" alt="home">
                 </div>
                 <div class="Text">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa debitis rerum ex nostrum sint illo earum voluptates in amet corporis.</p>
-                    <h3>Dorade Rose Royale</h3>
+                    <p>Eine köstliche, heiß frittierte Portion Kibbeling, für die sich viele Menschen an den Fischspezialisten wenden. Eine köstliche Portion Kibbeling zuzubereiten beginnt mit dem Kauf von qualitativ hochwertigem Fisch. 
+                        Gebratener Kibbeling von echtem Kabeljau sorgt immer für ein köstliches Ergebnis.
+                    </p>
+                    <h3>Kibbelings aus eigener Herstellung</h3>
+                    <!-- Genau wie Bild oder Überschrift -->
                 </div>
             </div>
         </div>
     </section>
-    <section class="slider" id="slider">
+    <!-- Promis Page endet Hier -->
+    <!-- Bilder Page startet Hier -->
+    <section class="slider" id="slider" data-aos="fade-in">
         <div class="title white">
-            <h2 class=titleText><span>B</span>ildergallerie</h2>
+            <h2 class=titleText><span>B</span>ildergalerie</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, vero?</p>
         </div>
         <div class="slideshow-container">
             <i class="fas fa-arrow-right" onclick="newSlide(1)" id="nextBtn"></i>
             <i class="fas fa-arrow-left" onclick="newSlide(-1)" id="prevBtn"></i>
             <div class="image-container">
-                <img src="./sliderimg/img5medium.jpg" class="image fade">
+                <img src="https://static.wixstatic.com/media/a94ba0_ebd6404c4bcd456d8794b403e2002872~mv2_d_4800_2700_s_4_2.jpg/v1/fill/w_582,h_320,al_c,q_80,usm_0.66_1.00_0.01/fischdietz%2016zu9%20Transparent.webp" class="image fade" alt="home">
             </div>
             <div class="image-container">
-                <img src="./sliderimg/img2medium.jpg" class="image fade">
+                <img src="https://static.wixstatic.com/media/a94ba0_edf2d51c4819449ab650ae2cd885d853~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_293,h_383,al_c,q_80,usm_0.66_1.00_0.01/20190206_091117.webp" class="image fade" alt="home">
             </div>
             <div class="image-container">
-                <img src="./sliderimg/img3medium.jpg" class="image fade">
+                <img src="https://static.wixstatic.com/media/a94ba0_35ecae455acb4efb99eb98167b432535~mv2_d_1600_1200_s_2.jpg/v1/fill/w_600,h_450,al_c,q_80,usm_0.66_1.00_0.01/20161106_181202.webp" class="image fade" alt="home">
             </div>
             <div class="image-container">
-                <img src="./sliderimg/img4medium.jpg" class="image fade">
+                <img src="https://static.wixstatic.com/media/a94ba0_f25b33acde4d4e609b97801be475a162~mv2_d_4608_3072_s_4_2.jpg/v1/fill/w_600,h_450,al_c,q_80,usm_0.66_1.00_0.01/Fischwagen_JPG.webp" class="image fade" alt="home">
             </div>
             <div class="image-container">
-                <img src="./sliderimg/img2medium.jpg" class="image fade">
+                <img src="https://static.wixstatic.com/media/a94ba0_0e60c148ef0d4374bf4105dcbea59bec~mv2_d_3024_4032_s_4_2.jpg/v1/fill/w_600,h_450,al_c,q_80,usm_0.66_1.00_0.01/20190206_091024.webp " class="image fade" alt="home">
             </div>
             <div class="dot-container">
                 <span class="dot" onclick="currentSlide(1)"></span>
@@ -218,28 +353,54 @@
             </div>
         </div>
     </section>
-    <section class="contact" id="contact">
+    <!-- Bilder Page endet Hier -->
+    <!-- Kontakt Page startet Hier -->
+    <section class="contact" id="contact" data-aos="fade-in">
         <div class="title white">
-            <h2 class="titleText"><span>K</span>ontaktieren sie uns</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut.</p>
-        </div>
-        <div class="contactForm">
-            <h3>Sende uns eine Nachricht</h3>
-            <div class="inputBox">
-                <input type="text" placeholder="Name">
+            <h2 class=titleText><span>K</span>ontatkiere <span>u</span>ns</h2>
+            <p>Natürlich auch mobil erreichbar unter der Nummer:  015253928838 Standort -> Tel: 02921/63981</p>
+            <p>Wir suchen für unsere Wochenmärkte Verstärkung: ein Verkäufer/in Basis 450€ <br>Wir kommen auf sie zurück!</br></p>
+        <div class="contact-in">
+            <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.4964057870984!2d8.18262691597372!3d51.57746491339861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bbd784cfb94e21%3A0xf402c311344b9155!2sSteinkuhler%20Weg%2014%2C%2059505%20Bad%20Sassendorf!5e0!3m2!1sde!2sde!4v1608503412378!5m2!1sde!2sde" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" title="Unser Standort" tabindex="0"></iframe>
             </div>
-            <div class="inputBox">
-                <input type="text" placeholder="Email">
-            </div>
-            <div class="inputBox">
-                <textarea placeholder="Nachricht"></textarea>
-            </div>
-            <div class="inputBox">
-                <input type="submit" value="Send">
+            <div class="contact-form">
+                <h1>Dein Anliegen</h1>
+                <form>
+                    <label>Name<input type="text" placeholder="Name" class="contact-form-txt" required/></label>
+                    <label>E-mail<input type="email" placeholder="Email" class="contact-form-txt" required/></label>
+                    <label>Nachricht<textarea placeholder="Message" class="contact-form-textarea" required></textarea></label>
+                    <input type="submit" placeholder="Submit" class="contact-form-btn" />
+                </form>
             </div>
         </div>
     </section>
+    <!-- Kontakt Page endet Hier -->
+    <!-- Footer Piece startet Hier -->
+    <section>
+        <div class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <a href="imp.html">Impressum/Datenschutz</a>
+                    <a class="fab" href="https://twitter.com/" aria-hidden="true"><i class="fab fa-twitter-square" ></i></a>
+                    <a class="fab" href="https://facebook.com/" aria-hidden="true"><i class="fab fa-facebook-square" ></i></a>
+                    <a class="fab" href="https://Instagram.com/" aria-hidden="true"><i class="fab fa-instagram-square" ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Piece endet Hier -->
+    <!-- Scripts starten Hier -->
     <script src="./js/main.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset:200,
+            delay:100,
+            duration:1500,
+        });
+    </script>
+    <!-- Scripts enden Hier -->
 </body>
 </html>

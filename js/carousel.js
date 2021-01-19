@@ -35,3 +35,6 @@ carouselSlide.addEventListener('transitionend', ()=>{
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
 });
+
+<div class="g-recaptcha" data-sitekey="6Ld1jA8aAAAAAOxEH_Ir-0Yd09uXS2zD_ErYSoy1
+                    "></div>
